@@ -114,4 +114,4 @@ Credit to:
 - Niclas
 [Email](niclas.lund@ga.ntig.se)
 - Shazhoud
-[Email](-)
+[Email](shahzod.ravshanov@elev.ga.ntig.se )
