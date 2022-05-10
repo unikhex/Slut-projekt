@@ -2,6 +2,8 @@
 
 ## *Description*
 
+This here is a Qr code generator in which encodes texts or links that it is given and it could also decode already existing qr codes.
+
 ## *Language/ Built with*
 
 Python 3.9
@@ -62,7 +64,7 @@ Done with creating a decoder of the qr code.
 
 v_1.4
 
-Most of the time was spent loon´king for a way to read the name of the qr picture so that i can decode it directly.
+Most of the time was spent looking for a way to read the name of the qr picture so that i can decode it directly.
 
 V-1.5
 
