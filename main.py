@@ -1,7 +1,7 @@
 import pyqrcode
 from pyzbar.pyzbar import  decode 
 from PIL import Image 
-import os
+
 # imports that are needed for the code to work
 #pyqrcode is what makes it possible to easily created qr.codes without needing to do much
 #From pyzbar we import decode to decode. This makes it possible to decode the qr codes.
@@ -9,6 +9,8 @@ import os
 
 
 def options():
+    print("\n\nWelcome to Thee Qr code generator and decoder\n")
+
     print("[1] encode")
     print("[2] decode")
     print("[0] exit the generator ")
@@ -19,7 +21,7 @@ def options():
 
 
 def encode():
-    print("Welcome to the QR code generator.")
+    print("\n Welcome to the encoder.\n")
 
     qr = pyqrcode.create(str(input("Write here your link to generate a qr for it  : ")))
     to_save = input(" Would you like to save the qr? y/n ")
@@ -31,21 +33,36 @@ def encode():
         print(" Well fuck off i spent so much time on this for you to just not use it")
     else:
            print("Returning to menu...")  
+    
+    ''' The function creates a qr code, ask for an input on the name the qr should dbe saved as, 
+    then saves the Qr as the namegiven.png 
+    If the person choses no to svae it just returns to the menu and the process repeats.
+    '''       
+
 # The above function first creates a qr code with a link/text that you give it with the variable qr.
 #Then you are asked if you would like to save the qr 
 #It then saves the qr.code as the name that was given by you.
 #If you chose not to save it will just return you to the menu.
 
 def decode_qr():
-        to_save = input("If you are willing to decode your file please y/n: ")
+        print("\n Welcome to the decoder.\n")
+        to_save = input("Are you here to decode your file please y/n: ")
 
         if to_save == "y":
-           name = input("Write the name of your file which you are willing to decode " )
+           name = input("Write the name of the file you want to decode " )
 
            d = decode(Image.open(f"{name}.png")) 
            print(d[0].data.decode("ascii"))
         else:
             print("Returning to menu...")
+    
+        ''' The above function asks for a name of a saved qr code,
+         decrypts the message/ link behind that qr code,
+         It uses the Import Image to decrypt the picture of the Qr with the name that waas given,
+          it then displays the message that we need which is the [0] in the terminal.
+          Everything else is irrelevant as in without the [0] and ascii it would display everything including the size of the picture 
+          and all that we dont need those.
+        '''
 # The function is basicly the same as the encode one,
 #  It asks for an input if you would like to decode a saved qr code
 # If choice is yes it will ask for the name of the of the qr code then it will deocde it
@@ -68,6 +85,12 @@ def menu():
         choice = input(">> ")
     else:
         print(" You chose fuck off, good")
+    '''It calls back to the the function we defined ealier(options),
+    Inputting "0" or something will automaticly break the code
+    The first choice is encode. This allows you to create a Qr
+    The second choice is decode, it decrypts the Qr and displays the message/ link behind it.
+
+    '''
 #We begin by calling back the options that we defined earlier.
 #We then bring up choices, you can either chose from choice one (encode),or choice 2 (decode)
 #Anything else will bring you back to  the menu. Since if anything else is there the code breaks.

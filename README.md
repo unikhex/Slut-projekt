@@ -60,8 +60,8 @@ It exists back to the menu.
 
 There will be a choice to decode the qr code that is already there. It asks you to input the name of the Qr. The decryption will then be seen in the terminal.
 
-
 ## *Changelog for everyversion*
+
 v_1
 
 Nothing much done here
