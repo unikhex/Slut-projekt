@@ -65,6 +65,9 @@ Image
 [![image](https://user-images.githubusercontent.com/95760773/168820606-41ef7d5e-cf0c-4fbf-936f-1f780e57b17b.png)
 ]
 
+Here is an image of how the encoding works.
+
+
 
 ## *Changelog for everyversion*
 
