@@ -76,6 +76,10 @@ def menu():
         
         if choice == "encode":
             encode()
+        if choice == "1":
+            encode()
+        if choice == "2":
+            decode_qr()
         elif choice == "decode":
             decode_qr()
         elif choice == "0":
