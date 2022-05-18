@@ -71,7 +71,7 @@ Here is an image of how the encoding works.
 
 Currently it is only possible to genearate Qr code for links that are given.
 
-I could try to make it so that it jsut takes in random links or texts and makes it to a Qr
+I could try to make it so that it just takes in random links or texts and makes it to a Qr
 
 ## *Changelog for everyversion*
 
