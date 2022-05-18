@@ -7,7 +7,6 @@ from PIL import Image
 #From pyzbar we import decode to decode. This makes it possible to decode the qr codes.
 #IMage makes it possible to save the qr ocdes as an image file, such as .png, jpeg,jpg and many more.
 
-
 def options():
     print("\n\nWelcome to Thee Qr code generator and decoder\n")
 
@@ -24,9 +23,9 @@ def encode():
     print("\n Welcome to the encoder.\n")
 
     qr = pyqrcode.create(str(input("Write here your link to generate a qr for it  : ")))
-    to_save = input(" Would you like to save the qr? y/n ")
+    to_save = input("\n Would you like to save the qr? y/n \n")
     if to_save == "y": # cant get this part to work
-       name = input("What shall the save be called: ")
+       name = input("\n What shall the save be called:\n ")
        if name:
            qr.png(f"{name}.png", scale = 8) 
     elif to_save == "n":
@@ -46,10 +45,10 @@ def encode():
 
 def decode_qr():
         print("\n Welcome to the decoder.\n")
-        to_save = input("Are you here to decode your file please y/n: ")
+        to_save = input("\n Are you here to decode your file please y/n: \n ")
 
         if to_save == "y":
-           name = input("Write the name of the file you want to decode " )
+           name = input("\n Write the name of the file you want to decode \n" )
 
            d = decode(Image.open(f"{name}.png")) 
            print(d[0].data.decode("ascii"))
