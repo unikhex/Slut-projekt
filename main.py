@@ -20,11 +20,11 @@ def options():
 
 
 def encode():
-    print("\n Welcome to the encoder.\n")
+    print("\n Welcome to the QR encoder.\n")
 
     qr = pyqrcode.create(str(input("Write here your link to generate a qr for it  : ")))
     to_save = input("\n Would you like to save the qr? y/n \n")
-    if to_save == "y": # cant get this part to work
+    if to_save == "y": 
        name = input("\n What shall the save be called:\n ")
        if name:
            qr.png(f"{name}.png", scale = 8) 
@@ -44,7 +44,7 @@ def encode():
 #If you chose not to save it will just return you to the menu.
 
 def decode_qr():
-        print("\n Welcome to the decoder.\n")
+        print("\n Welcome to the Qr decoder.\n")
         to_save = input("\n Are you here to decode your file please y/n: \n ")
 
         if to_save == "y":
@@ -87,7 +87,7 @@ def menu():
         options()
         choice = input(">> ")
     else:
-        print(" You chose fuck off, good")
+        print(" Bye bye")
     '''It calls back to the the function we defined ealier(options),
     Inputting "0" or something will automaticly break the code
     The first choice is encode. This allows you to create a Qr
